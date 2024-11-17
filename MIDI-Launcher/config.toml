@@ -1,0 +1,38 @@
+# MIDI Launcher - Configuration File
+
+version = 1
+
+[[commands]]
+name = "example"
+event = "note_on"
+note = 40
+ports = ["UM-One", "Arturia"]
+command = "echo 'Note on received: $VALUE'"
+
+[[commands]]
+active = true
+channels = "all"
+command = "pactl set-sink-mute @DEFAULT_SINK@ 0"
+event = "note_on"
+name = "unmute"
+note = 40
+ports = "LPD8"
+
+[[commands]]
+active = true
+channels = "all"
+command = "pactl set-sink-mute @DEFAULT_SINK@ 1"
+event = "note_on"
+name = "mute"
+note = 41
+ports = "LPD8"
+
+[[commands]]
+active = true
+command = "pactl set-sink-volume @DEFAULT_SINK@ $DECIMAL"
+control = 70
+event = "control_change"
+values = "0:25:1, 25:125:5, 127"
+mapping = [0, 1]
+name = "set volume"
+ports = "LPD8"
