@@ -1,0 +1,6 @@
+# MIDI Launcher - Configuration File
+
+# Since the version field is not 1, an error message should be given and
+# the program should be terminated.
+
+version = 3

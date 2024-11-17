@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """Monitor MIDI messages and launch commands based on the messages received.
 
 Written by Christoph Hänisch
@@ -264,7 +266,7 @@ def parse_user_input(user_input:int|str|list,
 
 class MIDILauncher:
     """Monitor MIDI messages and launch commands based on the messages received."""
-    
+
     def __init__(self, config_file='config.toml', verbosity_level=0, ignore_clock=False):
         self.verbosity_level = verbosity_level
         self.commands = []

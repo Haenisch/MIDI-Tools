@@ -1,0 +1,11 @@
+# MIDI Launcher - Configuration File
+
+# The program should run without any errors.
+# For each received note event, the note number should be put out.
+
+version = 1
+
+[[commands]]
+name = "example"
+event = "note_on"
+command = "echo 'Note on received: $VALUE'"
